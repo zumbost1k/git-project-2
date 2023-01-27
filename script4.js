@@ -1,11 +1,11 @@
-function hof(n) {
-  let A = [1]
-  let B = [2]
-  while (A.length - 1 !== n) {
-    A.push(A[A.length - 1] + B[A.length - 1])
-    if (A.includes(B[B.length - 1] + 1)) { B.push(B[B.length - 1] + 2) }
-    else (B.push(B[B.length - 1] + 1))
+function hof(number) {//это название с кодварса
+  const firstSequence = [1]
+  const secondSequence = [2]
+  while (firstSequence.length - 1 !== number) {
+    firstSequence.push(firstSequence[firstSequence.length - 1] + secondSequence[firstSequence.length - 1])
+    if (firstSequence.includes(secondSequence[secondSequence.length - 1] + 1)) { secondSequence.push(secondSequence[secondSequence.length - 1] + 2) }
+    else (secondSequence.push(secondSequence[secondSequence.length - 1] + 1))
   }
-  return A[n]
+  return firstSequence[number]
 }
-console.log(hof(100000))
+hof(100000)

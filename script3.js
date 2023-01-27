@@ -1,53 +1,53 @@
-let obj = {
-    data: 'A',
+const obj = {//это объект обычный, вопросов к нему у меня нет
+  data: 'A',
+  left: Node = {
+    data: 'B',
     left: Node = {
-      data: 'B',
+      data: 'D',
       left: Node = {
-        data: 'D',
-        left: Node = {
-          data: 'H',
-          left: undefined,
-          right: undefined
-  
-        },
-        right: undefined
-      },
-      right: Node = {
-        data: 'E',
+        data: 'H',
         left: undefined,
         right: undefined
-      }
+
+      },
+      right: undefined
     },
     right: Node = {
-      data: 'C',
+      data: 'E',
+      left: undefined,
+      right: undefined
+    }
+  },
+  right: Node = {
+    data: 'C',
+    left: Node = {
+      data: 'F',
       left: Node = {
-        data: 'F',
+        data: 'I',
+        left: undefined,
+        right: undefined
+      },
+      right: undefined
+    },
+    right: Node = {
+      data: 'G',
+      left: undefined,
+      right: Node = {
+        data: 'J',
         left: Node = {
-          data: 'I',
+          data: 'K',
           left: undefined,
           right: undefined
         },
-        right: undefined
-      },
-      right: Node = {
-        data: 'G',
-        left: undefined,
         right: Node = {
-          data: 'J',
-          left: Node = {
-            data: 'K',
-            left: undefined,
-            right: undefined
-          },
-          right: Node = {
-            data: 'L',
-            left: undefined,
-            right: undefined
-          }
+          data: 'L',
+          left: undefined,
+          right: undefined
         }
       }
     }
   }
+}
 
 function serpentineTree(node) {
   const queue = []
@@ -66,4 +66,4 @@ function serpentineTree(node) {
   binarTree([node], 0)
   return queue
 }
-console.log(serpentineTree(obj))
+serpentineTree(obj)
